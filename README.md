@@ -10,7 +10,7 @@ Also, while this is mainly a personal preference, since I am very used to the Si
 
 ### How to use it
 
-To add the custom styles you can use [Amino](https://aminoeditor.com/) or [Stylebot](https://stylebot.dev/). 
+To add the custom styles you can use [Amino](https://aminoeditor.com/) _(or [Stylebot](https://stylebot.dev/) for CSS)_. 
 
-Install one of the extensions in your browser, go to [notejoy.com](https://notejoy.com/), and launch the extension, then just copy paste the CSS.
+Install one of the extensions in your browser, go to [notejoy.com](https://notejoy.com/), and launch the extension, then just copy-paste the SCSS/CSS.
 
