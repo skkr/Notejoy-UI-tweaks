@@ -1,6 +1,6 @@
 # Notejoy-UI-tweaks
 
-This CSS code modifies the design of [NoteJoy](https://notejoy.com/) in order to get a cleaner UI and improve the text hierarchies _(text color is changed only in Scarlet themes)_.
+This SCSS/CSS code modifies the design of [NoteJoy](https://notejoy.com/) in order to get a cleaner UI and improve the text hierarchies _(text color is changed only in Scarlet themes)_.
 
 ### What's this about
 
@@ -10,7 +10,7 @@ Also, while this is mainly a personal preference, since I am very used to the Si
 
 ### How to use it
 
-To add the custom styles you can use [Amino](https://aminoeditor.com/) _(or [Stylebot](https://stylebot.dev/) for CSS)_. 
+To add the custom styles you can use [Amino](https://aminoeditor.com/) _(or [Stylebot](https://stylebot.dev/) for the CSS version)_. 
 
 Install one of the extensions in your browser, go to [notejoy.com](https://notejoy.com/), and launch the extension, then just copy-paste the SCSS/CSS.
 
