@@ -1,179 +1,114 @@
-// BODY
 #note-body #editor {
-    font-size: 130% !important;
-
-    p,
-    blockquote,
-    .ql-checklist {
-        
-        b,
-        strong {
-            font-weight: 500;
-        }
-    }
-
-    blockquote {
-        font-weight: 300;
-
-        +p {
-            margin-top: .5rem;
-        }
-    }
-
-    >div {
-        h1 {font-size: 1.3rem;}
-
-        h1, h2, h3, h4, h5, h6 {
-            margin-bottom: 0;
-        }
-
-        p {margin-bottom: -.2rem;}
-
-        h1, h2, h3, h4, h5, h6, 
-        ul, ol, .ql-checklist, blockquote {
-            margin-bottom: 0;
-        }
-
-        .ql-divider {
-            margin-bottom: 0;
-        }
-    }
-
+  font-size: 130% !important;
 }
-
+#note-body #editor p b, #note-body #editor blockquote b, #note-body #editor .ql-checklist b, #note-body #editor p strong, #note-body #editor blockquote strong, #note-body #editor .ql-checklist strong {
+  font-weight: 500;
+}
+#note-body #editor blockquote {
+  font-weight: 300;
+}
+#note-body #editor blockquote + p {
+  margin-top: 0.5rem;
+}
+#note-body #editor > div h1 {
+  font-size: 1.3rem;
+}
+#note-body #editor > div h1, #note-body #editor > div h2, #note-body #editor > div h3, #note-body #editor > div h4, #note-body #editor > div h5, #note-body #editor > div h6 {
+  margin-bottom: 0;
+}
+#note-body #editor > div p {
+  margin-bottom: -0.2rem;
+}
+#note-body #editor > div h1, #note-body #editor > div h2, #note-body #editor > div h3, #note-body #editor > div h4, #note-body #editor > div h5, #note-body #editor > div h6, #note-body #editor > div ul, #note-body #editor > div ol, #note-body #editor > div .ql-checklist, #note-body #editor > div blockquote {
+  margin-bottom: 0;
+}
+#note-body #editor > div .ql-divider {
+  margin-bottom: 0;
+}
 #note-backlinks {
-    padding: 1rem;
-
-    :last-child {
-        margin-bottom: 0;
-    }
+  padding: 1rem;
 }
-
-
-// SIDEBAR
+#note-backlinks :last-child {
+  margin-bottom: 0;
+}
 #sidebar {
-    position: absolute;
-    width: 14.5rem !important;
-    z-index: 1000;
-    transition: all .2s ease-in-out;
-    outline: 300rem solid transparent;  
+  position: absolute;
+  width: 14.5rem !important;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  outline: 300rem solid transparent;
 }
-
 #sidebar:hover {
-    outline: 300rem solid rgba(0, 0, 0, .5);
-    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .9);
-    left: 0;
+  outline: 300rem solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.9);
+  left: 0;
 }
-
 #sidebar:not(:hover) {
-    overflow: hidden;
-    left: - 14.5rem;
-    border-right: .3rem solid #202022;
-
-    #sidebar-header {}
+  overflow: hidden;
+  left: - 14.5rem;
+  border-right: 0.3rem solid #202022;
 }
-
-#sidebar-upgrade {display: none;}
-
-// EXPLORER
+#sidebar-upgrade {
+  display: none;
+}
 #explorer {
-
-    width: 20rem !important;
-
-    #explorer-header {
-
-        #explorer-header-sort-menu {left: 0 !important;}
-        #explorer-header-actions-menu {left: 10rem !important;}    
-    
-        #explorer-header-nav-left,
-        #explorer-header-nav-right {
-            width: 2rem !important;
-        }
-
-        #explorer-header-nav-title {
-            width: calc(100% - 4.5rem) !important;
-        }
-
-        #search-box {
-            width: calc(100% - 1rem) !important;
-        }
-    }
-
-    #explorer-resize {
-        display: none;
-    }
+  width: 20rem !important;
 }
-
+#explorer #explorer-header #explorer-header-sort-menu {
+  left: 0 !important;
+}
+#explorer #explorer-header #explorer-header-actions-menu {
+  left: 10rem !important;
+}
+#explorer #explorer-header #explorer-header-nav-left, #explorer #explorer-header #explorer-header-nav-right {
+  width: 2rem !important;
+}
+#explorer #explorer-header #explorer-header-nav-title {
+  width: calc(100% - 4.5rem) !important;
+}
+#explorer #explorer-header #search-box {
+  width: calc(100% - 1rem) !important;
+}
+#explorer #explorer-resize {
+  display: none;
+}
 #viewer:not(.focused) {
-    width: 80vw !important;
-    padding-left: 20vw !important;
-
-    #note-body {
-        width: auto !important;
-
-        #editor .ql-editor {
-            max-width: 50rem;
-            margin: 0 auto;
-            padding: 0 .5rem;
-        }
-
-        #editor-toolbar {
-            left: auto !important;
-        }
-    }
+  width: 80vw !important;
+  padding-left: 20vw !important;
 }
-
-
-// THEMES
-$text-color: #989898;
-$text-color--light: #ccc;
-$text-color--lighter: #bbb;
-$text-color--strong: #d9d9d9;
-$text-color--accent: tomato;
-$link-color--light: #979798;
-$background-color--light: #2D2E3188;
-
-[class*="theme-scarlet"] {
-    // MENU
-    .explorer-note-preview {color: $text-color;}
-
-    // BODY
-    #note-body #editor {
-        code {
-            color: $text-color--accent;
-        }
-
-        p,
-        blockquote,
-        .ql-checklist {
-            color: $text-color;
-
-            b,
-            strong {
-                color: $text-color--strong;
-            }
-        }
-
-        blockquote {
-            color: $text-color--lighter;
-        }
-
-        >div {
-            .ql-divider {
-                opacity: .7;
-            }
-        }
-
-    }
+#viewer:not(.focused) #note-body {
+  width: auto !important;
 }
-
-[class*="-dark"] {   
-    #note-backlinks {
-        color: $link-color--light;
-        background: $background-color--light;
-
-        #note-backlinks-title {
-            color: $text-color--light;
-        }
-    }
+#viewer:not(.focused) #note-body #editor .ql-editor {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+#viewer:not(.focused) #note-body #editor-toolbar {
+  left: auto !important;
+}
+[class*="theme-scarlet"] .explorer-note-preview {
+  color: #989898;
+}
+[class*="theme-scarlet"] #note-body #editor code {
+  color: tomato;
+}
+[class*="theme-scarlet"] #note-body #editor p, [class*="theme-scarlet"] #note-body #editor blockquote, [class*="theme-scarlet"] #note-body #editor .ql-checklist {
+  color: #989898;
+}
+[class*="theme-scarlet"] #note-body #editor p b, [class*="theme-scarlet"] #note-body #editor blockquote b, [class*="theme-scarlet"] #note-body #editor .ql-checklist b, [class*="theme-scarlet"] #note-body #editor p strong, [class*="theme-scarlet"] #note-body #editor blockquote strong, [class*="theme-scarlet"] #note-body #editor .ql-checklist strong {
+  color: #d9d9d9;
+}
+[class*="theme-scarlet"] #note-body #editor blockquote {
+  color: #bbb;
+}
+[class*="theme-scarlet"] #note-body #editor > div .ql-divider {
+  opacity: 0.7;
+}
+[class*="-dark"] #note-backlinks {
+  color: #979798;
+  background: #2D2E3188;
+}
+[class*="-dark"] #note-backlinks #note-backlinks-title {
+  color: #ccc;
 }
